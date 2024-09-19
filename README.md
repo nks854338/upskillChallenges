@@ -1,6 +1,6 @@
-# 🎯 Upskill Mafia Challenges Repository
+# 🎯 Upskill Mafia Challenges
 
-Welcome to the **Upskill Mafia Challenges Repository**! 🚀 This repository contains all the challenges I've completed as part of my journey with **Upskill Mafia**, showcasing code solutions and demo links for each challenge.
+Welcome to the **Upskill Mafia Challenges**! 🚀 This repository contains all the challenges I've completed as part of my journey with **Upskill Mafia**, showcasing code solutions and demo links for each challenge.
 
 ## 📁 Repository Structure
 
