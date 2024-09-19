@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+}
+
+.boxes {
+    display: flex;
+    padding-top: 15vmin;
+    padding-bottom: 15vmin;
+    height: 70vh;
+    transition: transform 0.3s ease;
+}
+
+.box {
+    flex: 0 0 auto;
+    margin-right: 20px; 
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+.box img {
+    max-height: 100%;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+.box:first-child {
+    margin-left: 20px;
+}

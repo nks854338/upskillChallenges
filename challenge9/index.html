@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch Me!</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #111;
+        overflow: hidden;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn {
+        padding: 18px 50px;
+        border: none;
+        border-radius: 15px;
+        background-color: #ffc300;
+        color: #000;
+        font-size: 4vmin;
+        cursor: pointer;
+        position: absolute;
+        transition: transform 0.2s;
+        box-shadow: #fff 0 0 5px;
+      }
+
+      .btn:hover {
+        background-color: #ffd60a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">Catch Me</button>
+    </div>
+
+    <script>
+      const button = document.querySelector(".btn");
+
+      button.addEventListener("mouseover", () => {
+        const randomX = getRandomNumber(-300, 300);
+        const randomY = getRandomNumber(-200, 200);
+
+        button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+      });
+
+      function getRandomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+    </script>
+  </body>
+</html>

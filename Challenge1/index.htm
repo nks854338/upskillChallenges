@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* global css */
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color:#000 ;
+        overflow: hidden;
+        color: #fff;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 12vmin;
+        background-color: #000;
+        box-shadow: 0px 5px 10px #222;
+        padding: 0px 3vmin;
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+
+      #logo {
+        flex: 1;
+        margin-left: 20px;
+        color: #f77f00;
+      }
+
+      .menu {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      #menu ul {
+        list-style: none;
+        display: flex;
+        gap: 5vmin;
+        margin: 0;
+        padding: 0;
+      }
+
+      #menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 3vmin;
+      }
+
+      #logo {
+        font-size: 6vmin;
+        font-weight: 700;
+      }
+
+      .buyNow {
+        height: 6vmin;
+        width: 20vmin;
+        background-color: #fff;
+        box-shadow: gray 0 2px 5px;
+        margin-left: 3vmin;
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      a{
+        text-decoration: none;
+      }
+      /* navBar end */
+      /* section1 css */
+      .section1 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .box1 {
+        display: grid;
+        align-items: center;
+        width: 50%;
+        padding: 6vmin;
+      }
+
+      .first1 {
+        display: grid;
+        gap: 8vmin;
+      }
+
+      .box2 {
+        width: 50%;
+        position: relative;
+        left: 30vmin;
+      }
+
+      .box2 .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box2 .image img {
+        width: 80%;
+        height: 90%;
+        margin: 7vmin;
+      }
+
+      #img_1, .box2 .image .imgBorder{
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      }
+
+      .box2 .image .imgBorder{
+        width: 90%;
+        height: 90%;
+        margin: 7vmin;
+        padding-left: 3vmin;
+        background-color: #f77f00;
+      }
+
+
+      .first1 h2,
+      .comp21 h2 {
+        font-size: 7vmin;
+        font-weight: 700;
+      }
+
+      h2 .heading {
+        color: #f77f00;
+      }
+
+      p {
+        font-size: 2.5vmin;
+      }
+
+      .first1 button {
+        padding: 1.5vmin 6vmin;
+        font-weight: 600;
+        font-size: 3.5vmin;
+        margin: auto;
+        border-radius: 30px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      .first1 button a {
+        color: #000;
+      }
+
+    </style>
+    <title>Challenge1</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">Laptops</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <div id="menu" class="menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#facilitiesSection">Services</a></li>
+            <li><a href="#aboutUs">About us</a></li>
+            <li><a href="#contactUs">Contact us</a></li>
+          </ul>
+        </div>
+        <div id="user"><button class="buyNow">Buy Now</button></div>
+      </nav>
+      <section class="section1">
+        <div class="box1">
+          <div class="first1">
+            <h2>
+              Fresh, Fast, and Flawless Laundry Service for
+              <div class="heading">Busy Lives</div>
+            </h2>
+            <p>
+              Experience the ultimate in laundry convenience with our expert
+              service. We offer professional cleaning, folding, and delivery,
+              ensuring your clothes are fresh and spotless.
+            </p>
+            <button><a href="Product.html">Shop Now</a></button>
+          </div>
+        </div>
+
+        <div class="box2">
+          <div class="image">
+            <div class="imgBorder">
+            <img src="laptop.jpg" id="img_1" height="" />
+          </div>
+        </div>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challenge 2</title>
+<style>
+body{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('laptop.jpg');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.glass-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px 40px 30px;
+  width: 400px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+  color: #333;
+}
+
+button {
+    margin-top: 3vmin;
+  padding: 10px 20px;
+  width: 105%;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #000;
+  font-size: 3vmin;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+ transform: scale(1.02);
+}
+
+.noAccount{
+    color:#fff ;
+    margin: auto;
+    padding-top: 8vmin;
+}
+
+.noAccount a{
+    font-weight: 900;
+    color: #fff;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="glass-card">
+      <h2>Login</h2>
+      <form>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <button type="submit">Login</button>
+        <div class="noAccount">
+            Don't have a account? <a href="#">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

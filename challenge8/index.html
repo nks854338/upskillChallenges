@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilt Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <h2>Card</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, facilis? Itaque sit quaerat quod atque labore! Omnis quae incidunt minus.</p>
+            <button>Read Me</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const card = document.querySelector('.card');
+
+        card.addEventListener('mousemove', (e) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardX = cardRect.left + cardRect.width / 2;
+            const cardY = cardRect.top + cardRect.height / 2;
+            const angleX = (cardY - e.clientY) / -10;
+            const angleY = (cardX - e.clientX) / 10;
+
+            card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    });
+</script>
+</html>

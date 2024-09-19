@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magnetic Buttons</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10vmin;
+      }
+
+      .btn {
+        height: 10vmin;
+        width: 50vmin;
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(45deg, #fd0208, #ffba08);
+        color: white;
+        font-size: 4vmin;
+        cursor: pointer;
+        transition: transform 0.3s linear;
+        position: relative;
+      }
+
+      .btn:hover {
+        background: linear-gradient(45deg, #164653, #2a9d8f);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn" id="btn1">Hover Me</button>
+      <button class="btn" id="btn2">Hover Me</button>
+    </div>
+    <script>
+      document.querySelectorAll(".btn").forEach((button) => {
+        button.addEventListener("mousemove", function (e) {
+          const rect = button.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          button.style.transform = `translate(${x * 0.5}px, ${y * 1}px)`;
+        });
+
+        button.addEventListener("mouseleave", function () {
+          button.style.transform = "translate(0px, 0px)";
+        });
+      });
+    </script>
+  </body>
+</html>

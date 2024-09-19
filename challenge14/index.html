@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("jEPSOVDt_y5JRZMhL");
+      })();
+    </script>
+    <style>
+     h1{
+    font-size: 5.5vmin;
+    text-align: center;
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+form {
+    margin-top: 10vmin;
+    width: 30vw;
+    padding: 4vmin;
+    box-shadow: gray 0 2px 5px;
+    display: grid;
+    gap: 1vmin;
+    height: 65vh;
+    border-radius: 10px;
+}
+
+.loginFormInput {
+    width: 100%;
+    display: grid;
+    gap: 2vmin;
+}
+
+input, textarea , button{
+    border-radius: 10px;
+    border: none;
+    height: 5vmin;
+    width: 100%;
+    box-shadow: gray 0 2px 5px;
+    background-color: #ffffff;
+}
+
+textarea{
+  height: 20vmin;
+}
+
+
+
+button{
+    margin-top: 2vmin;
+    background-color: #111;
+    color: #fff;
+    height: 5.5vmin;
+    font-size: 3.2vmin;
+}
+
+button:hover{
+    background-color: #fc6a03;
+    color: #fff;
+    transform: scale(1.05);
+}
+    </style>
+    <title>Email JS</title>
+  </head>
+  <body>
+    <div class="box">
+    <form id="emailForm">
+      <h1>Send Email</h1>
+      <input type="text" placeholder="Name" id="name" /><br />
+      <input type="text" placeholder="Email" id="email" /><br />
+      <textarea type="text" placeholder="Message" id="message"></textarea><br />
+      <button type="submit">Send mail</button>
+    </form>
+  </div>
+    <script>
+      document.getElementById("emailForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        sendMail();
+      });
+
+      function sendMail() {
+        var params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
+
+        emailjs.send("service_4tzc6mf", "template_ty9cr6o", params)
+          .then(function(response) {
+            alert("Email sent successfully!");
+          })
+          .catch(function(error) {
+            console.error("Failed to send email:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

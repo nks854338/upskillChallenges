@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>challenge7</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="container">
+            <div class="imageBox">
+                <img src="images/1.jpg">
+            </div>
+            <div class="imageBox">
+                <img src="images/2.jpg">
+            </div>
+            <div class="imageBox">
+                <img src="images/3.jpg">
+            </div>
+            <div class="imageBox">
+                <img src="images/4.jpg">
+            </div>
+            <div class="imageBox">
+                <img src="images/5.jpg">
+            </div>
+       </div>
+    </body>
+    
+   <script>
+    document.querySelectorAll('.imageBox').forEach(box => {
+        box.addEventListener('mouseover', function() {
+            document.body.style.backgroundImage = `url(${this.querySelector('img').src})`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundRepeat = 'no-repeat';
+        });
+
+        box.addEventListener('mouseout', function() {
+            document.body.style.backgroundImage = 'none';
+        });
+    });
+</script>
+</body>
+</html>
+</html>
